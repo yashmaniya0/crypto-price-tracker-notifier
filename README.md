@@ -1,5 +1,5 @@
 # **Crypto Price Tracker and Notifier**
-This script will notify you when the specified crypto-currency price crosses the limit you entered. 
+This script will send you windows-notification when the specified crypto-currency price crosses the limit you entered.
 
 ![start with why](https://img.shields.io/badge/status-in%20progress-brightgreen.svg?style=flat) \
 \
