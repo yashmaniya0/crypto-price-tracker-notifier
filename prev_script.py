@@ -8,7 +8,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-API_KEY = os.getenv('API_KEY')
+API_KEY = os.getenv('API_KEY')  # we can send 10,000 requests per day
+                                # uses Live Coin Watch API
 
 toaster = ToastNotifier()
 print('Toaster is on!')
@@ -32,7 +33,7 @@ def stalk(coin = 'BTC', target = 5000000, sleep_time = 60):
         return logger
 
     def extract_price(coin:str):
-
+                                                            
         url = "https://api.livecoinwatch.com/coins/single"
         payload = json.dumps({
         "currency": "INR",
