@@ -5,4 +5,14 @@ This script will send you windows-notification when the specified crypto-currenc
 \
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-> You need to run ```script.py``` on your cmd or code editor. When the price limit is breached, you'll get a notification from Windows Notifications.
+## **Dependencies**
+You will need custom *win10toast* package as the one on pip does not have ```callback_on_click``` feature.
+* Run ```pip install win10toast```
+* Replace the directory *C:\Users\YOUR_USERNAME\AppData\Local\Programs\Python\Python39\Lib\site-packages\win10toast* with the one in the repository.
+
+## **Running the Sript**
+* Open Command Prompt
+* Make sure that ```sript.py``` is in your Current Working Directory
+* Run command ```python sript.py```
+
+You can also run it on the Code Editor of your choice.

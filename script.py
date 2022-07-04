@@ -29,7 +29,7 @@ def stalk(coin = 'BTC', target = 5000000, sleep_time = 60):
 
     def extract_price(coin:str):
                                                             
-        url = "https://api.wazirx.com/sapi/v1/ticker/24hr?symbol=" + coin + "inr"
+        url = "https://api.wazirx.com/sapi/v1/ticker/24hr?symbol=" + coin.lower() + "inr"
 
         response = requests.get(url).text
         data = json.loads(response)
@@ -38,7 +38,7 @@ def stalk(coin = 'BTC', target = 5000000, sleep_time = 60):
         return float(curr_price)
 
     def send_notif(curr_price):
-        target_link = 'https://wazirx.com/exchange/' + coin + '-INR'
+        target_link = 'https://wazirx.com/exchange/' + coin.lower() + '-INR'
 
         toaster.show_toast(title = f"Alert!!! Target for {coin.upper()} reached.\nCurrent Price is {curr_price} INR", msg = target_link ,
 	                   duration=10 , callback_on_click = lambda : webbrowser.open_new(target_link))
@@ -83,5 +83,8 @@ def stalk(coin = 'BTC', target = 5000000, sleep_time = 60):
             logger_2.info(curr_price)
 
 
+crypto = input('Crypto Code :\t')
+target = float(input('Set Limit :\t'))
+
 # here goes the command
-stalk(coin = 'rune', target = 180, sleep_time = 60)
+stalk(coin = crypto, target = target, sleep_time = 60)
