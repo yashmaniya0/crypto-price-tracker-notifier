@@ -44,9 +44,9 @@ def stalk(coin = 'BTC', target = 5000000, sleep_time = 60):
 	                   duration=10 , callback_on_click = lambda : webbrowser.open_new(target_link))
 
 
-    logger_0 = make_logger('log0', f'./{coin}_1min.log')
-    logger_1 = make_logger('log1', f'./{coin}_10mins.log')
-    logger_2 = make_logger('log2', f'./{coin}_1hr.log')
+    logger_0 = make_logger('log0', f'./{coin.upper()}_1min.log')
+    logger_1 = make_logger('log1', f'./{coin.upper()}_10mins.log')
+    logger_2 = make_logger('log2', f'./{coin.upper()}_1hr.log')
     secs = 0
 
     check_up = False
